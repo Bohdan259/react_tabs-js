@@ -4,7 +4,7 @@ export const Tabs = ({ tabs, activeTabId, onTabSelected }) => {
     ? activeTabId
     : tabs[0].id;
 
-//return
+  const activeTab = tabs.find(tab => tab.id === resolvedActiveId);
 
   return (
     <div data-cy="TabsComponent">
@@ -31,6 +31,10 @@ export const Tabs = ({ tabs, activeTabId, onTabSelected }) => {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="block" data-cy="TabContent">
+        {activeTab?.content}
       </div>
     </div>
   );
