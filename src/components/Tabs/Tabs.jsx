@@ -4,6 +4,8 @@ export const Tabs = ({ tabs, activeTabId, onTabSelected }) => {
     ? activeTabId
     : tabs[0].id;
 
+//return
+
   return (
     <div data-cy="TabsComponent">
       <div className="tabs is-boxed">
