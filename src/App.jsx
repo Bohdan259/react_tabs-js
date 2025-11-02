@@ -26,9 +26,11 @@ export const App = () => {
       <Tabs
         tabs={tabs}
         activeTabId={activeTabId}
-        onTableSelected={handleTabSelected}
-        activeTab={activeTab}
+        onTabSelected={handleTabSelected}
       />
+      <div className="block" data-cy="TabContent">
+        {activeTab.content}
+      </div>
     </div>
   );
 };
